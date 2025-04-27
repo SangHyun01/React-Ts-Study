@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: center; /* 세로 가운데 정렬 */
+  justify-content: flex-end; /* 좌우로 양 끝에 배치 */
+  padding: 10px 30px; /* 여백은 선택 */
+  background-color: forestgreen;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.link {
+  display: flex;
+  gap: 10px; /* 로그인/회원가입 사이 간격 */
+}
+
+.link a {
+  text-decoration: none;
+}
