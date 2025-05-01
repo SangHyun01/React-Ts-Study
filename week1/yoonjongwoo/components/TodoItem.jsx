@@ -1,17 +1,15 @@
-import React from 'react';
-import { MdCheckBox, MdCheckBoxOutlineBlank } from 'react-icons/md';
+// src/components/TodoItem.jsx
 
-const TodoItem = ({ todo }) => {
-  const { text, checked } = todo;
-
-  return (
-    <div className="TodoItem">
-      <div className={`content ${checked ? 'checked' : ''}`}>
-        {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
-        <div>{text}</div>
-      </div>
-    </div>
-  );
-};
+const TodoItem = ({ todo: { id, text }, onDelete }) => (
+  <li className="todo-item">
+    <span className="item-text">{text}</span>
+    <button
+      className="delete-button"
+      onClick={() => onDelete(id)}
+    >
+      삭제
+    </button>
+  </li>
+);
 
 export default TodoItem;

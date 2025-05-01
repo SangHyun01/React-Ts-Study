@@ -1,15 +1,15 @@
 import React from 'react';
-import TodoItem from './TodoItem.jsx';
+import TodoItem from './TodoItem';
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, onDelete }) => {
   if (todos.length === 0) {
-    return <p className="empty">empty</p>;
+    return <p className="empty-message">할 일이 없습니다.</p>;
   }
 
   return (
-    <ul className="TodoList">
+    <ul className="todo-list">
       {todos.map(todo => (
-        <TodoItem todo={todo} key={todo.id} />
+        <TodoItem key={todo.id} todo={todo} onDelete={onDelete} />
       ))}
     </ul>
   );
