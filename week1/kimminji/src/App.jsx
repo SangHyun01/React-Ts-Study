@@ -15,9 +15,9 @@ function App() {
   const [todos, setTodos] = useState(mockdata);
   const idRef = useRef(3);
 
-  useEffect(() => { // 로그 출력용
-    console.log('todos:', todos);
-  }, [todos]);
+  // useEffect(() => { // 로그 출력용
+  //   console.log('todos:', todos);
+  // }, [todos]);
   
 
   const onAddTodo = (content) => {
