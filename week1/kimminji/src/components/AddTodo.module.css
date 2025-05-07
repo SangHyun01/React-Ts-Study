@@ -1,0 +1,20 @@
+.frame {
+    display: flex;
+    gap: 10px;
+}
+
+.frame > input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.frame > button {
+    padding: 15px 20px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

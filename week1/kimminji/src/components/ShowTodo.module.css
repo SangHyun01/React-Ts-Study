@@ -1,0 +1,11 @@
+.frame > input {
+    width: 100%;
+    padding: 15px 0px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.frame > input:focus {
+    outline: none;
+    border-bottom: 1px solid #0077cc;
+}

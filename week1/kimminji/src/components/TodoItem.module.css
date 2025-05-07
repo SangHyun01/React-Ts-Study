@@ -1,0 +1,55 @@
+.frame {
+    display: flex;
+    gap: 10px;
+    flex-direction:row;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.frame > input {
+    width: 20px;
+}
+
+.frame > input:checked {
+    background-color: #0077cc;
+}
+
+.content {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+
+.content:focus {
+    outline: none;
+    border-bottom: 1px solid #0077cc;
+}
+
+.date {
+    font-size: 14px;
+    color: #999;
+}
+
+.editButton {
+    cursor : pointer;
+    background-color: #28a745; 
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.deleteButton {
+    cursor : pointer;
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
