@@ -24,14 +24,13 @@ const Register = () => {
 
     const onSubmitData = (e) => {
         e.preventDefault();
-        console.log('로그인 정보: ', data);
 
         // 유효성 검사
         if (!data.name || !data.phone || !data.email || !data.password) {
             alert('정보를 모두 입력하세요!');
             return;
         }
-    }
+    };
 
     return (
     <form onSubmit={onSubmitData}>
