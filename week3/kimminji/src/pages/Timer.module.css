@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.timer {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10rem;
+  letter-spacing: 0.1em;
+  padding: 1rem 2rem;
+  /* border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+  margin-bottom: 2rem;
+  text-align: center;
+  min-width: 320px;
+}
+
+.study {
+  color: #ff4d4d; /* 빨강 */
+}
+
+.rest {
+  color: #4d79ff; /* 파랑 */
+}
+
+.youtubeWrapper {
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 150vw;
+}
