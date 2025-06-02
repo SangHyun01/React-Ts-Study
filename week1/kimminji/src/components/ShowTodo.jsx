@@ -1,20 +1,17 @@
 import styles from './ShowTodo.module.css';
 import TodoItem from './TodoItem';
-import { useState } from 'react';
+import useInput from '../hooks/useInput';
 
 function ShowTodo( { todos, onEditTodo, onCompleteTodo, onDeleteTodo } ) {
-    const [search, setSearch] = useState('');
 
-    const onChangeSearch = (e) => {
-        setSearch(e.target.value);
-    }
+    const [search, onChangeSearch] = useInput(''); // 사용자 정의 Hook 사용
 
     const filteredTodos = () => {
-        if (search === '') {
-            return todos;
-        }
-        return todos.filter(todo => todo.content.toLowerCase().includes(search.toLowerCase())); 
-    }
+        if (search === '') return todos;
+        return todos.filter(todo =>
+        todo.content.toLowerCase().includes(search.toLowerCase())
+        );
+    };
 
     const searchedTodos = filteredTodos();
 

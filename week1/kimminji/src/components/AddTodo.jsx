@@ -1,28 +1,25 @@
 import styles from './AddTodo.module.css';
-import { useState } from 'react';
+// import { useState } from 'react';
+import useInput from '../hooks/useInput';
 
 function AddTodo({ onAddTodo }) {
 
-    const [content, setContent] = useState('');
-
-    const onChangeContent = (e) => {
-        setContent(e.target.value);
-    }
+    const [content, onChangeContent, resetContent] = useInput(''); // 사용자 정의 Hook 사용
 
     const onSubmit = () => {
-        if (content === '') {
-            alert('할 일을 입력해주세요');
-            return;
-        }
-        onAddTodo(content);
-        setContent('');
-    }
-
+      if (content === '') {
+        alert('할 일을 입력해주세요');
+        return;
+      }
+      onAddTodo(content);
+      resetContent(); 
+    };
+  
     const onKeyDown = (e) => {
-        if (e.keyCode === 13) {
-            onSubmit();
-        }
-    }
+      if (e.keyCode === 13) {
+        onSubmit();
+      }
+    };
 
     return (
         <div className={styles.frame}>
